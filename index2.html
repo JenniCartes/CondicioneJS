@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickers</title>
+</head>
+<body>
+    <p>Puedes llevar hasta 10 stickers en total</p>
+    <main>        
+        <div>
+            <img  src="./assets/img/arnold.jpg" alt="gerald" width="100px">
+            <input id="stk1" type="number" min="0" max="10">
+        </div>
+        <div>
+            <img  src="./assets/img/helga.png" alt="Helga" width="100px">
+            <input id="stk2" type="number" min="0" max="10" >
+        </div><div> 
+            <img  src="./assets/img/yuyin.png" alt="todos los personajes" width="100px">
+            <input id="stk3" type="number" min="0" max="10">
+        </div>
+    </main>
+    <p id="resultado"></p>
+    <button onclick="verificar_suma()">Verificar</button>
+    
+    <script>
+        function verificar_suma(){
+            stk1_value = document.getElementById('stk1').value
+            stk2_value = document.getElementById('stk2').value
+            stk3_value = document.getElementById('stk3').value
+            suma = Number (stk1_value) + Number(stk2_value) + Number(stk3_value)
+            console.log(suma)
+            verificar = document.getElementById('resultado')
+
+            if(suma > 10){
+                verificar.innerHTML = 'Llevas demasiados stickers'
+            }
+            else{
+                verificar.innerHTML = 'Llevas ' + suma + ' stickers'
+            }
+
+
+
+
+        }
+    </script>
+
+
+</body>
+</html>
